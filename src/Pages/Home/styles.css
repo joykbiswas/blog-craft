@@ -1,0 +1,32 @@
+.box{
+  display: flex;
+  width: 100%;
+  gap: 14px;
+}
+
+.blogs{
+   width: 75%;
+   display: grid;
+
+}
+.sidebar{
+   width: 25%;
+
+}
+@media (min-width: 768px) {
+    .blogs {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+@media (min-width: 426px) and (max-width: 767px) {
+    .blogs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 425px) {
+    /* Mobile devices (max-width: 424px) */
+    .blogs {
+      grid-template-columns: 1fr;
+    }
+}

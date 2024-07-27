@@ -1,0 +1,12 @@
+
+.blog-title {
+    display: inline-block; /* Makes the background color fit the text width */
+    color: white;
+    background-color: #0080ff;
+    padding: 5px 10px; 
+    border-radius:  12px  0 12px; 
+   
+}
+.line{
+    border: 2px solid #0080ff;
+}
