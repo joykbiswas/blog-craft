@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../../../assets/logo9.png";
-import "./styles.css"; // Import the CSS file
+import "./styles.css"; 
 import { BsBlockquoteRight } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {

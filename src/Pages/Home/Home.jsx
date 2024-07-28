@@ -5,7 +5,6 @@ import SearchBar from "../../Components/SearchBar/SearchBar";
 import EmptyList from "../../Components/Shared/EmptyList/EmptyList";
 import BlogLIst from "../../Components/BlogList/BlogLIst";
 import Sidebar from "../../Components/Sidebar/Sidebar";
-// import { useMyContext } from "../ContextBlog/ContextBLog";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
@@ -49,11 +48,6 @@ const Home = () => {
     currentPage * itemsPerPage
   );
 
-// // context api latest blog
-// const { latestBlog, setLatestBlog } = useMyContext();
-// console.log(latestBlog);
-
-
   // Search submit
   const handleSearchBar = (e) => {
     e.preventDefault();
@@ -67,8 +61,7 @@ const Home = () => {
       blog.title.toLowerCase().includes(searchKey.toLowerCase().trim())
     );
     setBlogs(filteredBlogs);
-    // setCurrentPage(1);
-    console.log(filteredBlogs);
+   
   };
 
   // Clear search and show all blogs
