@@ -1,5 +1,5 @@
 .footer {
-    background-color: #333;
+    background-color: #011e2d;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -26,4 +26,11 @@
 
 .footer-link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .footer p {
+        font-size: 16px; /* Smaller font size for small devices */
+        margin: 10px 0;
+    }
 }

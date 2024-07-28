@@ -8,7 +8,7 @@
 
 
 nav {
-  padding: 10px 30px;
+  padding: 10px 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,7 +18,7 @@ nav {
 }
 
 .logo img{
- width: 120px;
+ width: 160px;
 }
 
 nav ul {
@@ -44,7 +44,10 @@ nav ul li a {
   color: #fff;
   font-size: 30px;
 }
-
+.icon{
+  color: white;
+  font-size: large;
+}
 @media (max-width: 600px) {
   nav ul {
     position: absolute;

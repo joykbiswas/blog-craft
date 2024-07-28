@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 
-const LatestDetails = ({latests}) => {
+const LatestDetails = ({latests, onRemoveItem}) => {
     console.log(latests);
-    const {title, body} = latests;
+    
+  
+    const {id, title, body, date} = latests;
     return (
-        <div style={{padding: "10px"}} className="">
+        <div style={{padding: "10px"}}>
            <h3>{title}</h3>
            <p className="body">{
                 body.length >50 ?(
@@ -12,6 +14,8 @@ const LatestDetails = ({latests}) => {
                 )
                 :(<p>{body}</p>)
               }</p>
+              <p>publish:{date}</p>
+              <button className="btn" onClick={() => onRemoveItem(id)}>Remove</button>
               <hr />
         </div>
     );

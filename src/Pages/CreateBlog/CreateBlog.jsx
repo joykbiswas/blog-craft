@@ -1,10 +1,18 @@
 import { useState } from 'react';
 import './formStyles.css';
+import {  useMyContext } from '../ContextBlog/ContextBLog';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const CreateBlog = () => {
+    // const [formData, setFormData] = useState({
+    //     title: '',
+    //     body: '',
+    // });
     const [formData, setFormData] = useState({
         title: '',
         body: '',
+        date: ''
     });
 
     const handleChange = (e) => {
@@ -14,11 +22,36 @@ const CreateBlog = () => {
             [name]: value,
         });
     };
-
+    const { latestBlog, setLatestBlog } = useMyContext();
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Handle form submission logic here
+        const currentDate = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
+        const newId = Date.now().toString();
+        const newBlog = {
+            ...formData,
+            date: currentDate,
+            id: newId
+        };
+        console.log('Form submitted:', newBlog);
+        // setLatestBlog([...latestBlog, formData]);
+        setLatestBlog([...latestBlog, newBlog]);
+        console.log(newBlog);
+        
+        // console.log(formData);
+        setFormData({
+            title: '',
+            body: '',
+            date: ''
+        });
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "see all latest blog",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        navigate('/');
     };
 
     return (

@@ -20,3 +20,11 @@
 .id{
     font-size: 14px;
 }
+.custom-link {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.custom-link:hover {
+    text-decoration: none; 
+}

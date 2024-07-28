@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from 'react-router-dom';
 import './styles.css'
 
 const BlogLIst = ({blog}) => {
@@ -7,7 +8,8 @@ const BlogLIst = ({blog}) => {
     const {id, title, body}= blog;
     return (
         <div className='container'>
-            <h2 className='id'>Blog No: {id}</h2>
+          <Link  to={`/details/${id}`} className="custom-link">
+          <h2 className='id'>Blog No: {id}</h2>
            <h3 className="title">{
                 title.length >40 ?(
                   <p>{title.slice(0,40)} <span>  ...</span></p>
@@ -21,6 +23,7 @@ const BlogLIst = ({blog}) => {
                 )
                 :(<p>{body}</p>)
               }</p>
+          </Link>
 
         </div>
     );

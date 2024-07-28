@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/logo9.png";
 import "./styles.css"; // Import the CSS file
 import { BsBlockquoteRight } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
@@ -23,14 +23,11 @@ const Navbar = () => {
           <NavLink to="/create-blog">Create Blog</NavLink>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
-        </li>
-        <li>
-          <a href="">Product</a>
+          <NavLink to="#">About</NavLink>
         </li>
       </ul>
       <div onClick={toggleMenu} className="menu-icon">
-        <BsBlockquoteRight />
+        <BsBlockquoteRight  className="icon"/>
         <i className="fa fa-solid fa fa-bars" onClick={toggleMenu}></i>
       </div>
     </nav>

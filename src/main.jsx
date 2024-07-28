@@ -5,11 +5,14 @@ import { RouterProvider } from "react-router-dom";
 import './index.css'
 import { HelmetProvider } from 'react-helmet-async';
 import router from './Router/router';
+import { ContextBLog } from './Pages/ContextBlog/ContextBLog';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider >
-    <RouterProvider router={router} />
+   <ContextBLog>
+   <RouterProvider router={router} />
+   </ContextBLog>
     </HelmetProvider>
    
   </React.StrictMode>,
